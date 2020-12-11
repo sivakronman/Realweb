@@ -35,33 +35,25 @@
                     global $connection;
                     $query = "SELECT * FROM categories";
                     $select_categories_sidebar = mysqli_query($connection,$query);
-                    // while ($row = mysqli_fetch_assoc($select_categories_sidebar))
-                    // {
-                    //     $title_cat = $row['cat_title'];
-                    //     // echo "<li>{$titlea_cat}</li>";
                         ?>
-                    <!-- <li>
-                        <a href="#"><?php echo $row['cat_title']; ?></a>
-                    </li> -->
-                        <!-- <?php
-                    //}
+                    <!-- <?php echo $row['cat_title']; ?> -->
 
-                    ?> -->
+                    <h4>Blog Categories</h4>
+                    <div class="row">
+                    <div class="col-lg-12">
+                    <ul class="list-unstyled">
 
-
-    <h4>Blog Categories</h4>
-    <div class="row">
-        <div class="col-lg-6">
-            <ul class="list-unstyled">
-                <?php
-                while ($row = mysqli_fetch_assoc($select_categories_sidebar))
+                    <?php
+                    while ($row = mysqli_fetch_assoc($select_categories_sidebar))
                     {
-                    $title_cat = $row['cat_title'];
-                    // echo "<li>{$titlea_cat}</li>";
+                    $cat_title = $row['cat_title'];
+                    #echo "<li><a href='#'>{$cat_title}</a></li>;
                     ?>
+
                     <li>
                     <a href="#"><?php echo $row['cat_title']; ?></a>
                     </li>
+
                     <?php
                     }
                 ?>
@@ -86,7 +78,5 @@
 </div>
 
 <!-- Side Widget Well -->
-<div class="well">
-<?php include 'widget.php'; ?>
 
-</div>
+<?php include 'includes/widget.php'; ?>
