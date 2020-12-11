@@ -10,7 +10,7 @@
         </footer>
 
     </div>
-    <!-- /.container>>>>>>>>>>>>>> -->
+    <!-- /.container>>>>>>>>>>>>>>>>>>>> -->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
